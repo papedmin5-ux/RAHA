@@ -1,0 +1,384 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F8F6F0;
+    color: #303D32;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #FFFDF8;
+}
+
+.logo h1 {
+    color: #526B56;
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #789477;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 100px 8%;
+    background-color: #F7F5EF;
+}
+
+.subtitle {
+    color: #789477;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    color: #344B38;
+    font-size: 42px;
+    max-width: 750px;
+    margin: 20px auto;
+}
+
+.hero p {
+    color: #666666;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background-color: #526B56;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: #344B38;
+    transform: translateY(-4px);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: #FFFDF8;
+}
+
+.about h2 {
+    color: #344B38;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #666666;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* =========================
+   CYCLE GUIDE
+========================= */
+
+.cycle-guide {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #EEF1E9;
+}
+
+.cycle-guide h2 {
+    color: #344B38;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cycle-guide > p {
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.guide-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: #FFFDF8;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+}
+
+.card h3 {
+    color: #526B56;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666666;
+    line-height: 1.6;
+}
+
+
+/* LEARN MORE BUTTON */
+
+.learn-btn {
+    background-color: #526B56;
+    color: white;
+    border: none;
+    padding: 11px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.learn-btn:hover {
+    background-color: #344B38;
+    transform: translateY(-3px);
+}
+
+.learn-btn:focus-visible {
+    outline: 3px solid #789477;
+    outline-offset: 3px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #354D39;
+    color: white;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 15px;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about,
+    .cycle-guide {
+        padding: 45px 18px;
+    }
+
+    .about h2,
+    .cycle-guide h2 {
+        font-size: 26px;
+    }
+
+    .guide-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .card h3 {
+        font-size: 19px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .learn-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .details {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 18px;
+    }
+}
+
+.back {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #55745B;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+.test-box {
+    background-color: #DDE6D5;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+.details {
+    margin-top: 18px;
+    padding: 15px;
+    background-color: #EEF1E9;
+    border-left: 4px solid #789477;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #465548;
+}
+
+/* WELCOME SECTION */
+
+.welcome {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: #EEF1E9;
+}
+
+.welcome h2 {
+    color: #344B38;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.welcome > p {
+    color: #666666;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.benefit {
+    background-color: #FFFDF8;
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+}
+
+.benefit h3 {
+    color: #526B56;
+}
+
+.benefit p {
+    color: #666666;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+}
+.benefit-icon {
+    color: #526B56;
+    margin-bottom: 15px;
+}
+
+.benefit-icon svg {
+    width: 48px;
+    height: 48px;
+}
